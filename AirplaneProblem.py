@@ -7,7 +7,7 @@ class Node:
     def __init__(self, x: int, y: int):
         self.x = x  # cost to move RIGHT
         self.y = y  # cost to move DOWN
-        self.price = 0
+        self.price = 0 # best cost from (0,0) to this node 
 
     def __repr__(self):
         return f"({self.x},{self.y}, price={self.price})"
@@ -292,11 +292,17 @@ def build_matrix_from_seed(student_id: str, n: int, m: int, max_w: int = 20):
 def main():
     """
     Main function demonstrating all functionality.
-    
-    !!! IMPORTANT: Replace the student_id with YOUR actual student ID !!!
+        - Generates matrix from student ID
+        - Computes second best cost and paths
+        - Computes top-k costs and counts
+        - Computes all distinct costs up to T
+        - Prints results in a clear format
+        - Handles edge cases (single row/column)
+        - Ensures deterministic output based on student ID
+        - Limits output for large numbers of paths/costs for readability    
     """
-    # !!! REPLACE THIS WITH YOUR STUDENT ID !!!
-    student_id = "123456789"  # TODO: Replace with your 9-digit student ID
+  
+    student_id = "123456789" 
     
     # Parameters
     n, m = 4, 4
